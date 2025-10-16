@@ -14,13 +14,16 @@ MODULE_LICENSE("GPL");
 
 dev_t device_number;
 
+int count = 0;
+
+char buffer[DEV_MEM_SIZE];
 
 struct pcd_device{
 	struct cdev pcd_cdev;
 	int arr[DEV_MEM_SIZE];
 };
 /* cdev struct */
-st^ruct cdev pcd_cdev;
+struct cdev pcd_cdev;
 
 /*File Operations struct */
 
